@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badminton Player Selector</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="theme-color" content="#047857">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🏸 Badminton Player Selector</h1>
+  <span id="count">0 players</span>
+</header>
+<main>
+  <section class="card">
+    <h2>Manage Players</h2>
+    <form id="addForm" class="row">
+      <input id="name" placeholder="Player name" autocomplete="off">
+      <button class="green">Add</button>
+    </form>
+    <ul id="players"></ul>
+  </section>
+  <section class="card">
+    <h2>Selection Panel</h2>
+    <div class="row wrap">
+      <button class="teal" id="selectBtn">Select 4 Players</button>
+      <button class="outline" id="restartBtn">Restart Selection</button>
+      <button class="outline red" id="resetBtn">Reset History</button>
+    </div>
+    <p id="progress" class="muted"></p>
+    <p id="matchInfo"></p>
+    <div class="grid" id="boxes"></div>
+    <div class="row">
+      <button class="green grow" id="aWon" disabled>Team A Won</button>
+      <button class="blue grow" id="bWon" disabled>Team B Won</button>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
